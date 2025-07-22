@@ -81,17 +81,17 @@
         @media (max-width: 500px) {
             .blue-row {
                 flex-wrap: nowrap;
-                justify-content: space-between; /* 或 center 都可以 */
-                /* overflow-x: auto; 這行請刪除 */
+                justify-content: space-between;
+                gap: 4px; /* 減少間距 */
             }
             .blue-button {
-                min-width: 60px;
-                max-width: 70px;
+                min-width: 0; /* 允許更小 */
                 flex: 1 1 0;
                 margin-bottom: 0;
-                font-size: 15px; /* 字體可略縮小 */
-                padding: 8px 0;  /* 上下padding，左右padding可減少 */
+                font-size: 13px; /* 字體再小一點 */
+                padding: 8px 0;
                 box-sizing: border-box;
+                max-width: none; /* 取消最大寬度限制 */
             }
         }
         .blue-button {
