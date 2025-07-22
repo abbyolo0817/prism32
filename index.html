@@ -82,16 +82,21 @@
             .blue-row {
                 flex-wrap: nowrap;
                 justify-content: space-between;
-                gap: 4px; /* 減少間距 */
+                width: 100%;
+                padding: 0 8px; /* 讓按鈕不會貼邊 */
+                box-sizing: border-box;
             }
             .blue-button {
-                min-width: 0; /* 允許更小 */
                 flex: 1 1 0;
+                min-width: 0;
                 margin-bottom: 0;
-                font-size: 13px; /* 字體再小一點 */
+                font-size: 13px;
                 padding: 8px 0;
                 box-sizing: border-box;
-                max-width: none; /* 取消最大寬度限制 */
+                margin-left: 4px;
+            }
+            .blue-button:first-child {
+                margin-left: 0;
             }
         }
         .blue-button {
