@@ -82,22 +82,25 @@
             .blue-row {
                 display: flex;
                 flex-wrap: nowrap;
-                justify-content: center;      /* 讓整排置中 */
+                justify-content: center;
                 align-items: center;
                 width: 100%;
                 padding: 0 8px;
                 box-sizing: border-box;
-                gap: 4px;                    /* 用 gap 控制間距 */
+                gap: 4px;
             }
             .blue-button {
-                flex: 1 1 0;                 /* 平均分配寬度 */
-                min-width: 0;                /* 允許自動縮小 */
-                margin: 0;                   /* 移除 margin-left */
-                font-size: 13px;
+                width: 72px;           /* 固定寬度 */
+                min-width: 0;
+                max-width: 100px;      /* 防止超大 */
+                margin: 0;
+                font-size: 15px;
                 padding: 8px 0;
                 box-sizing: border-box;
                 text-align: center;
-                max-width: none;
+                white-space: nowrap;   /* 文字不換行 */
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
         .blue-button {
